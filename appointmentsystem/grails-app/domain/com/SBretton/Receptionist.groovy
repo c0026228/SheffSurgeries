@@ -11,7 +11,7 @@ class Receptionist {
 
 
     static constraints = {
-        recepname nullable:false, blank:false
+        recepName nullable:false, blank:false
         recepEmail nullable:false, blank:false, email:true
         recepUsername nullable:false, blank:false
         receppassword nullable:false, blank:false
