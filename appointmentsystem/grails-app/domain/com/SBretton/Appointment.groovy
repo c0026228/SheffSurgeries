@@ -6,7 +6,7 @@ class Appointment {
     String appTime
     String duration
     String roomNumber
-String toString(){
+    String toString(){
         return appDate
     } 
 
@@ -20,4 +20,5 @@ String toString(){
         //theappointment nullable:false, blank:false
     }
 
+static hasMany = [doctor:Doctor, patient:Patient, surgery:Surgery]
 }

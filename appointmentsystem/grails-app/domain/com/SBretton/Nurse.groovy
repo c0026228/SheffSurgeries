@@ -8,6 +8,9 @@ class Nurse {
     String nurseOffice
     String nursePhone
     String bio
+        String toString(){
+        return fullName
+    } 
 
 
 
@@ -21,5 +24,6 @@ class Nurse {
         bio nullable:false, blank:false
         //thenurse nullable:false, blank:false
     }
-
+static hasMany = [doctor:Doctor, surgery:Surgery]
+static belongsTo = [doctor:Doctor]
 }

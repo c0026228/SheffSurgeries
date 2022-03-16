@@ -7,6 +7,9 @@ class Receptionist {
     String recepUsername
     String receppassword
     String recepPhone
+        String toString(){
+        return recepName
+    } 
 
 
 
@@ -19,5 +22,5 @@ class Receptionist {
         //thereceptionist nullable:false, blank:false
        
     }
- 
+ static hasMany = [surgery:Surgery]
 }

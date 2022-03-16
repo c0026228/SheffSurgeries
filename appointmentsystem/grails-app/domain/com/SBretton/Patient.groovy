@@ -8,6 +8,9 @@ class Patient {
     int patientID
     Date dateregistered
     String patientPhone
+        String toString(){
+        return patientName
+    } 
 
 
 
@@ -21,5 +24,6 @@ class Patient {
         patientPhone nullable:false, blank:false
         //thepatient nullable:false, blank:false
     }
-
+static hasMany = [doctor:Doctor, surgery:Surgery, prescription:Prescription, appointment:Appointment]
+static belongsTo = [doctor:Doctor, appointment:Appointment]
 }

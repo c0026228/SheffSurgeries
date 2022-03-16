@@ -10,6 +10,9 @@ class Surgery {
     String description
     String openingTime
     String registeringnewpatients
+        String toString(){
+        return name
+    } 
 
 
 
@@ -26,5 +29,6 @@ class Surgery {
         //thesurgery nullable:false, blank:false
        
     }
-
+static hasMany = [appointment:Appointment, nurse:Nurse, patient:Patient]
+static belongsTo = [receptionist:Receptionist]
 }

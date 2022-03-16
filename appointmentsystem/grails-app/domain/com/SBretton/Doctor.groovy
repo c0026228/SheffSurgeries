@@ -10,6 +10,9 @@ class Doctor {
     String doctorOffice
     String doctorPhone
     String bio
+        String toString(){
+        return fullName
+    } 
 
 
 
