@@ -16,7 +16,7 @@ class Appointment {
         appDate nullable:false, blank:false
         appTime nullable:false, blank:false
         duration nullable:false, blank:false
-        roomNumber nullable:false, blank:false
+        roomNumber nullable:false, blank:false, unique: true
         //theappointment nullable:false, blank:false
     }
 
