@@ -21,9 +21,9 @@ class Patient {
         patientDob nullable:false, blank:false
         patientID nullable:false, blank:false, unique: true
         dateregistered nullable:false, blank:false
-        patientPhone nullable:false, blank:false, unique: true, size 0...11
+        patientPhone nullable:false, blank:false, unique: true, size: 0..11
         //thepatient nullable:false, blank:false
     }
 static hasMany = [doctors:Doctor, appointments:Appointment, prescriptions:Prescription, surgerys:Surgery]
-static belongsTo = [Doctor, Surgery]
+static belongsTo = [Doctor, Surgery, Appointment, Prescription]
 }

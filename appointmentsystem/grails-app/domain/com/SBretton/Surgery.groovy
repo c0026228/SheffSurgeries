@@ -21,7 +21,7 @@ class Surgery {
         name nullable:false, blank:false
         address nullable:false, blank:false
         postcode nullable:false, blank:false
-        telephone nullable:false, blank:false, unique: true, size: 0...11
+        telephone nullable:false, blank:false, unique: true, size: 0..11
         numberOfPatients nullable:false, blank:false
         description nullable:false, blank:false
         openingTime nullable:false, blank:false
@@ -30,4 +30,5 @@ class Surgery {
        
     }
 static hasMany = [doctors:Doctor, receptionists:Receptionist, patients:Patient, appointments:Appointment, nurses:Nurse]
+
 }

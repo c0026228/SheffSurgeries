@@ -20,5 +20,6 @@ class Appointment {
         //theappointment nullable:false, blank:false
     }
 
-static hasMany = [doctor:Doctor, patient:Patient, surgery:Surgery]
+static hasMany = [doctor:Doctor, patient:Patient, surgerys:Surgery]
+static belongsTo = [Surgery]
 }

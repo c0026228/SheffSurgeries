@@ -25,5 +25,6 @@ class Prescription {
         //theprescription nullable:false, blank:false
        
     }
- static hasMany = [doctor:Doctor, patient:Patient]
+ static hasMany = [doctors:Doctor, patients:Patient]
+static belongsTo = [Doctor, Patient]
 }
