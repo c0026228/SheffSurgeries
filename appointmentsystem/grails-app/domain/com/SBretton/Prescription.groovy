@@ -16,7 +16,7 @@ class Prescription {
 
     static constraints = {
         pharmacyName nullable:false, blank:false
-        prescriptionNumber nullable:false, blank:false
+        prescriptionNumber nullable:false, blank:false, unique: true
         medicine nullable:false, blank:false
         totalCost nullable:false, blank:false
         dateIssued nullable:false, blank:false
@@ -25,5 +25,5 @@ class Prescription {
         //theprescription nullable:false, blank:false
        
     }
- static hasMany = [doctor:Doctor, patient: Patient]
+ static hasMany = [doctor:Doctor, patient:Patient]
 }

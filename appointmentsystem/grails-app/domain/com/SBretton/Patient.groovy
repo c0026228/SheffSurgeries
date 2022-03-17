@@ -16,14 +16,14 @@ class Patient {
 
     static constraints = {
         patientName nullable:false, blank:false
-        patientAddress nullable:false, blank:false
+        patientAddress nullable:false, blank:false, unique: true
         patientResidence nullable:false, blank:false
         patientDob nullable:false, blank:false
-        patientID nullable:false, blank:false
+        patientID nullable:false, blank:false, unique: true
         dateregistered nullable:false, blank:false
-        patientPhone nullable:false, blank:false
+        patientPhone nullable:false, blank:false, unique: true, size 0...11
         //thepatient nullable:false, blank:false
     }
-static hasMany = [doctor:Doctor, surgery:Surgery, prescription:Prescription, appointment:Appointment]
-static belongsTo = [doctor:Doctor, appointment:Appointment]
+static hasMany = [doctors:Doctor, appointments:Appointment, prescriptions:Prescription, surgerys:Surgery]
+static belongsTo = [Doctor, Surgery]
 }
