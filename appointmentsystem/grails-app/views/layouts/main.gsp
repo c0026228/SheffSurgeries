@@ -32,6 +32,9 @@
 </nav>
 <g:layoutBody/>
  <g:loginToggle />
+ <g:loginToggleDoc />
+ <g:loginToggleNurse />
+ <g:loginTogglePatient />
 <div class="footer" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
