@@ -4,8 +4,8 @@ class Receptionist {
     int receptionistID
     String recepName
     String recepEmail
-    String recepUsername
-    String receppassword
+    String username 
+    String password 
     String recepPhone
         String toString(){
         return recepName
@@ -16,8 +16,8 @@ class Receptionist {
     static constraints = {
         recepName nullable:false, blank:false
         recepEmail nullable:false, blank:false, email:true, unique: true
-        recepUsername nullable:false, blank:false, unique: true
-        receppassword nullable:false, blank:false
+        username nullable:false, blank:false, unique: true
+        password nullable:false, blank:false
         recepPhone nullable:false, blank:false, unique: true, size: 0..11
         //thereceptionist nullable:false, blank:false
        

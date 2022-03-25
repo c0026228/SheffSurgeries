@@ -94,6 +94,33 @@ class DoctorController {
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
+
+               def login() {
+ }
+
+ def validate() {
+def user = Doctor.findByUsername(params.username)
+if (user && user.password == params.password){
+session.user = user
+render view:'home'
+}
+
+else{
+flash.message = "Invalid username and password."
+render view:'login'
+}
+}
+def logout = {
+ session.user = null
+ redirect(uri:'/')
+ }
+    protected void notFound() {
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'doctor.label', default: 'doctor'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }

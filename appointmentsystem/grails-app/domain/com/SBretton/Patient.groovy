@@ -4,6 +4,8 @@ class Patient {
     String patientName
     String patientAddress
     String patientResidence
+    String username 
+    String password
     Date patientDob
     int patientID
     Date dateregistered
@@ -18,6 +20,8 @@ class Patient {
         patientName nullable:false, blank:false
         patientAddress nullable:false, blank:false, unique: true
         patientResidence nullable:false, blank:false
+        username nullable:false, unique: true
+        password nullable:false
         patientDob nullable:false, blank:false
         patientID nullable:false, blank:false, unique: true
         dateregistered nullable:false, blank:false

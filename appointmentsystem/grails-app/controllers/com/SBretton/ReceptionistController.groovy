@@ -3,6 +3,7 @@ package com.SBretton
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+
 class ReceptionistController {
 
     ReceptionistService receptionistService
@@ -87,6 +88,25 @@ class ReceptionistController {
         }
     }
 
+    def login() {
+ }
+
+ def validate() {
+def user = Receptionist.findByUsername(params.username)
+if (user && user.password == params.password){
+session.user = user
+render view:'home'
+}
+
+else{
+flash.message = "Invalid username and password."
+render view:'login'
+}
+}
+def logout = {
+ session.user = null
+ redirect(uri:'/')
+ }
     protected void notFound() {
         request.withFormat {
             form multipartForm {

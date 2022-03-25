@@ -26,12 +26,12 @@
             <ul class="nav navbar-nav ml-auto">
                 <g:pageProperty name="page.nav"/>
             </ul>
+         
         </div>
     </div>
 </nav>
-
 <g:layoutBody/>
-
+ <g:loginToggle />
 <div class="footer" role="contentinfo">
     <div class="container-fluid">
         <div class="row">
