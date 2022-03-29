@@ -10,7 +10,6 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="application.css"/>
-
     <g:layoutHead/>
 </head>
 
@@ -32,9 +31,9 @@
 </nav>
 <g:layoutBody/>
  <g:loginToggle />
- <g:loginToggleDoc />
- <g:loginToggleNurse />
- <g:loginTogglePatient />
+ 
+
+
 <div class="footer" role="contentinfo">
     <div class="container-fluid">
         <div class="row">

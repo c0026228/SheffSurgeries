@@ -5,7 +5,7 @@ class Doctor {
     String fullName
     String qualifications
     String position
-    String doctorEmail
+    String email
     String username 
     String password
     String doctorOffice
@@ -22,7 +22,7 @@ class Doctor {
         fullName nullable:false, blank:false
         qualifications nullable:false, blank:false
         position nullable:false, blank:false
-        doctorEmail nullable:false, blank:false, email: true, unique: true
+        email nullable:false, blank:false, email: true, unique: true
         username nullable:false,  unique: true
         password nullable:false
         doctorOffice nullable:false, blank:false
