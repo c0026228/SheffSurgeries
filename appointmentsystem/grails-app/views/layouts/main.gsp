@@ -25,7 +25,9 @@
             <ul class="nav navbar-nav ml-auto">
                 <g:pageProperty name="page.nav"/>
             </ul>
-         
+  <div class="row">
+
+ </div>       
         </div>
     </div>
 </nav>

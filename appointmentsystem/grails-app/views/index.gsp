@@ -23,6 +23,7 @@
             <li role="separator" class="dropdown-divider"></li>
             <li class="dropdown-item"><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
         </ul>
+
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
@@ -46,11 +47,12 @@
 <div class="svg" role="presentation">
 
 </div>
-
+                    <asset:image src="Banner-Doctors.png " width="2000" height="300"/>
 <div id="content" role="main">
     <div class="container">
         <section class="row colset-2-its">
             <h1>Sheffield Surgeries</h1>
+
 
 
             <div id="controllers" role="navigation">

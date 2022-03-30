@@ -9,6 +9,7 @@ class PatientController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond patientService.list(params), model:[patientCount: patientService.count()]
@@ -86,11 +87,13 @@ class PatientController {
             '*'{ render status: NO_CONTENT }
         }
     }
+
+
     
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'patient.label', default: 'Patient'), params.id])
+                fglash.message = message(code: 'default.not.found.message', args: [message(code: 'patient.label', default: 'Patient'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
