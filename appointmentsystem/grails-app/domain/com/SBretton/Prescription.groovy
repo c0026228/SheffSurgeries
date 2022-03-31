@@ -8,6 +8,7 @@ class Prescription {
     String totalCost
     Date dateIssued
     Boolean patientPaying
+    String daysofsupply
     String toString(){
         return perscriptionID
     } 
@@ -21,10 +22,11 @@ class Prescription {
         totalCost nullable:false, blank:false
         dateIssued nullable:false, blank:false
         patientPaying nullable:false, blank:false
+        daysofsupply nullable:false, blank:false
 
         //theprescription nullable:false, blank:false
        
     }
- static hasMany = [doctors:Doctor, patients:Patient]
+static hasMany = [doctors:Doctor, patients:Patient]
 static belongsTo = [Doctor, Patient]
 }

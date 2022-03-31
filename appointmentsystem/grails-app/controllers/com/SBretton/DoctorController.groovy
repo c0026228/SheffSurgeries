@@ -106,6 +106,23 @@ def logout = {
  session.user = null
  redirect(uri:'/')
  }
+
+ def search(){
+        render view:'search'
+        }
+    def Results() {
+        def prescriptionsProps= Prescription.metaClass.properties*.name
+        def prescriptions = Prescription.withCriteria {
+ "${params.queryType}" {
+     params.each { field, value ->
+ if (prescriptionsProps.grep(field) && value) {
+ ilike(field, value)
+ }
+ }
+ }
+ }
+ return [ prescriptions : prescriptions ]
+ }
     protected void notFound() {
         request.withFormat {
             form multipartForm {
