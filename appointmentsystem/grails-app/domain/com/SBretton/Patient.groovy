@@ -1,23 +1,23 @@
 package com.SBretton
 
 class Patient {
-    String patientName
-    String patientAddress
-    String patientResidence
+    String name
+    String address
+    String residence
     Date patientDob
     int patientID
     Date dateregistered
     String patientPhone
         String toString(){
-        return patientName
+        return name
     } 
 
 
 
     static constraints = {
-        patientName nullable:false, blank:false
-        patientAddress nullable:false, blank:false
-        patientResidence nullable:false, blank:false
+        name nullable:false, blank:false
+        address nullable:false, blank:false
+        residence nullable:false, blank:false
         patientDob nullable:false, blank:false
         patientID nullable:false, blank:false
         dateregistered nullable:false, blank:false
