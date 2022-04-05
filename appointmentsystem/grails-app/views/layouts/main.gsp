@@ -31,12 +31,9 @@
         </div>
     </div>
 </nav>
-<g:layoutBody/>
-
+<g:layoutBody/> 
 
  <g:loginToggle />
-
- 
 
 
 <div class="footer" role="contentinfo">
