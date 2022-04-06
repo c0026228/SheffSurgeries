@@ -12,9 +12,9 @@
     <asset:stylesheet src="application.css"/>
     <g:layoutHead/>
 </head>
-
+<g:img uri="https://hardysigns.co.uk/wp-content/uploads/2019/06/NHS-Hardy-Signs-Clients.png" width="60" height="60"/>
 <body>
-
+<g:datePicker name="myDate" value="${new Date()}"/>
 <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,16 @@
 <g:layoutBody/> 
 
  <g:loginToggle />
+ 
+Version <g:meta name="info.app.version"/>
+Built with Grails <g:meta name="info.app.grailsVersion"/>
+
+
+
+
+
+
+
 
 
 <div class="footer" role="contentinfo">
